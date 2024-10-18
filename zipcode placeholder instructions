@@ -1,0 +1,8 @@
+// Add placeholder to "Postcode / Zip" field in WooCommerce checkout
+add_filter('woocommerce_checkout_fields', 'customize_postcode_placeholder');
+
+function customize_postcode_placeholder($fields) {
+    // Change the placeholder for billing postcode
+    $fields['billing']['billing_postcode']['placeholder'] = 'If you don\'t know your postcode, please type 12345';
+    return $fields;
+}
